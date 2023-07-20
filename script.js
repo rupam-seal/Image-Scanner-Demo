@@ -22,7 +22,13 @@ function scanImage() {
   const image = document.getElementById("selectedImage");
 
   if (image.src) {
+    const highlightedCanvas = scanner.highlightPaper(image);
     const resultCanvas = scanner.extractPaper(image, paperWidth, paperHeight);
+
+    // Display the scanned result on the page
+    const highlightedResultsDiv = document.getElementById("highlightedResults");
+    highlightedResultsDiv.innerHTML = "";
+    highlightedResultsDiv.appendChild(highlightedCanvas);
 
     // Display the scanned result on the page
     const scanResultsDiv = document.getElementById("scanResults");
