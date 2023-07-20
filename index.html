@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jscanify Image Scanner Demo</title>
+</head>
+<body>
+  <h1>jscanify Image Scanner Demo</h1>
+  <p>Select an image below to scan:</p>
+  <input type="file" id="imageInput">
+  <br>
+  <img id="selectedImage" src="" alt="Selected Image">
+  <br>
+  <button onclick="scanImage()">Scan Image</button>
+  <br>
+  <h2>Scan results will appear here:</h2>
+  <div id="scanResults"></div>
+
+  <script src="https://docs.opencv.org/4.7.0/opencv.js" async></script>
+  <script src="https://cdn.jsdelivr.net/gh/ColonelParrot/jscanify@master/src/jscanify.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
